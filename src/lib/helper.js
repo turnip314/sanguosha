@@ -5,7 +5,7 @@ export function drawCard(G, ctx) {
     const card = deck.pop();
     if (deck.length === 0) {
         // shuffle cards in discard back into the deck
-        deck.push(...random.Shuffle(discard.splice(0, discard.length)));
+        deck.push(...random.Shuffle([]));
     }
     if (isFlipped[card.id]) {
         delete isFlipped[card.id];
