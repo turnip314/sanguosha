@@ -1,5 +1,6 @@
 import { EQUIPMENT } from './cardCategories.js';
 import setup from './setup.js';
+import monarch from './setup.js';
 import { drawCard, drawCards, discard, nextAlivePlayerPos } from './helper.js';
 
 /* Moves */
@@ -11,7 +12,7 @@ function selectCharacter(G, ctx, index) {
     characterChoices[playerID] = undefined;
     characters[playerID] = character;
     let maxHealth = character.health;
-    if (numPlayers >= 4 && playOrder[startPlayerIndex] === playerID) {
+    if (numPlayers >= 4 && playOrder[startPlayerIndex] === playerID && monarch) {
         // if >= 4 players, add 1 extra health for the King
         maxHealth++;
     }

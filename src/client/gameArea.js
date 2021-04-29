@@ -6,6 +6,8 @@ import SetModePanel from './setModePanel';
 import AnimatedBoard from './animatedBoard';
 import './gameArea.css';
 
+import monarch from '../lib/setup.js';
+
 // Standard margin between objects
 const DELTA = 10;
 
@@ -155,7 +157,7 @@ export default class GameArea extends React.Component {
         const { G, scaledWidth, scaledHeight } = this.props;
         const { roles } = G;
         const role = roles[playerIndex];
-        const roleName = role.name || 'Role Back';
+        const roleName = monarch ? (role.name || 'Role Back') : 'Role Back';
         nodes.push(<img
             key={`role-${role.id}`}
             className='positioned'

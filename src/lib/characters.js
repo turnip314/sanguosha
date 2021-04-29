@@ -203,13 +203,13 @@ export default [
         expansion: 'wind',
         isMonarch: true,
     },
-    {
-        name: 'Yu Ji',
-        country: 'Kingdomless',
-        health: 3,
-        gender: 'M',
-        expansion: 'wind',
-    },
+    //{
+       // name: 'Yu Ji',
+        //country: 'Kingdomless',
+       // health: 3,
+       // gender: 'M',
+       // expansion: 'wind',
+    //},
     {
         name: 'Zhuge Liang 8',
         country: 'Shu',

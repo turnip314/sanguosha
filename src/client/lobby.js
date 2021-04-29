@@ -178,6 +178,7 @@ export default class SanGuoShaLobby extends React.Component {
             status = ['Expansions:', ...EXPANSIONS.map(expansion => <span key={expansion} className='expansion'>
                 <input
                     type='checkbox'
+                    checked="true"
                     value={this.state[`expansion-${expansion}`]}
                     onChange={e => this.setState({ [`expansion-${expansion}`]: e.target.checked })}
                 />

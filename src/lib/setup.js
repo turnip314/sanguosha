@@ -5,6 +5,8 @@
 import CHARACTERS from './characters.js';
 import { ROLE_DIST, ROLE_DIST_LABELS } from './roles.js';
 
+export const monarch = 0;
+
 const CARDS = [
     { value: 'A', suit: 'CLUB', type: 'Crossbow' },
     { value: 'A', suit: 'CLUB', type: 'Duel' },
@@ -190,7 +192,10 @@ export default function setup(ctx, setupData) {
     const normalCharacters = random.Shuffle(allCharacters.filter(c => !monarchChoices.includes(c)));
     const characterChoices = Object.fromEntries(playOrder.map((player, i) =>
         [player, normalCharacters.slice(numCharacterChoices * i, numCharacterChoices * (i + 1))]));
-    characterChoices[playOrder[startPlayerIndex]].push(...monarchChoices.slice(0, numCharacterChoices));
+    if (monarch) {
+        characterChoices[playOrder[startPlayerIndex]].push(...monarchChoices.slice(0, numCharacterChoices));
+    }
+    
     const characters = {};
     const healths = {};
     const isAlive = Object.fromEntries(playOrder.map(player => [player, true]));
