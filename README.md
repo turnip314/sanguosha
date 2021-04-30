@@ -1,5 +1,7 @@
 # San Guo Sha (三国杀)
 
+Note: This project is forked from https://github.com/kevinychen/sanguosha with some changes made for the purpose of personal use. Please credit the original developer if you decide to use this repo.
+
 San Guo Sha is a [popular Chinese card game](https://en.wikipedia.org/wiki/Legends_of_the_Three_Kingdoms). This online multiplayer English version supports all the characters and cards in the base set, as well as the [wind, fire, and wood expansions](http://sanguoshaenglish.blogspot.com/p/expansions.html). Try it at https://util.in:8098.
 
 ![Sanguosha](docs/sanguosha.gif)
